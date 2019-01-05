@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/register.css" />
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div class="register-main">
+				<form>
+					<div class="field">
+						<label for="tel">手机号：</label>
+						<div class="floatdiv">
+							<input type="text" id="tel"/>
+							<span>输入的手机格式不正确</span>
+						</div>
+					</div>
+					<div class="field">
+						<label for="picCode">图片码：</label>
+						<div class="floatdiv">
+							<input type="text" id="picCode"/><img src="../img/dapu_2014070101_login1.jpg" alt="" id="rand-pic"/><input type="button" id="message" value="获取短信码" />
+						</div>
+					</div>
+					<div class="field">
+						<p>请输入图片验证码</p>
+					</div>
+					<div class="field">
+						<label for="mesCode">短信码：</label>
+						<div class="floatdiv">
+							<input type="text" id="mesCode"/>
+							<span>短信码不正确</span>
+						</div>
+					</div>
+					<div class="field">
+						<label for="password">密码：</label>
+						<div class="floatdiv">
+							<input type="password" id="password"/>
+							<span>请输入6-16位密码</span>
+						</div>	
+						<div class="pwdStrong">
+							<div class="pwd-bar"></div>
+							<div class="strong">
+								<span>弱</span>
+								<span>中</span>
+								<span>强</span>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label for="rePwd">确认密码：</label>
+						<div class="floatdiv">
+							<input type="password" id="rePwd"/>
+							<span>两次密码不一致</span>
+						</div>
+					</div>
+					<div class="field agreement">
+						<input type="checkbox" />
+						<u>同意注册协议</u><a href="">《大朴用户协议》</a>
+					</div>
+					<div class="actions">
+						<input type="button" id="registerBtn" value="注册"/><span>我已经注册，现在就</span><a href="login.html">登录</a>
+					</div>
+				</form>
+			</div>
+		</main>
+		<footer></footer>
+		<script src="/libs/require/require.js" data-main = "/js/register.js"></script>
+	</body>
+</html>

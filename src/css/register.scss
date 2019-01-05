@@ -1,0 +1,72 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+main{width: 100%;height: 460px;}
+.register-main{width: 1200px;height: 452px;margin: 0 auto;background: url(../img/dapu_2014070101_login1.jpg) no-repeat;background-size: cover;position: relative;}
+.register-main form{width: 540px;height: 402px;position: absolute;right: 10px;top: 5px;background: #FFFFFF;border-radius: 5px;padding: 20px 0;}
+.field{
+    width: 465px;
+    height: 50px;
+    padding-left: 68px;
+    position: relative; 
+    p{
+        font-size: 12px;
+        white-space: nowrap;
+        padding-left: 35px;
+    }}
+.floatdiv{float: right;width: 432px;height: 50px;span{font-size: 12px;color: red;display: none;}}
+.register-main{
+    form{
+
+        label{
+            width: 200px;
+            height: 27px;
+            line-height: 27px;
+            font-size: 12px;
+            float: left;
+            text-align: right;
+            margin-left: -170px;
+        }
+        input{
+            width: 170px;
+            height: 25px;
+            padding: 0 6px;
+            border: 1px solid #DAD9D9;
+        }
+        input[type="checkbox"]{
+            width: 13px;
+            height: 13px;
+        }
+        .actions{padding: 10px 0 0 18%;
+            input{width: 200px;height: 40px;border: 1px solid #E0DFDB;background: #FFFFFF;font-size: 16px;color: #6B6B6B;}
+            span{font-size: 12px;color: #6B6B6B;margin-left: 3px;}  
+            a{color: red;}
+            a:hover{text-decoration: underline;}  
+        }
+    }
+}
+#picCode{width: 75px;height: 24px;}
+#rand-pic{width: 100px;height: 21px;padding: 0 8px;vertical-align: middle;}
+#message{height: 26px;color: #6B6B6B;font-size: 12px;text-align: center;border: none;width: 79px;}
+.agreement{
+    padding-left: 100px;
+    u{text-decoration: none;font-size: 12px;}
+    a{color: #6B6B6B;}
+    a:hover{text-decoration: underline;color: #7F5B42;}
+}
+.pwd-bar{width: 179px;height: 14px;background: url(/img/dapu_pwd-1.png);position: absolute;top: 7px;left: 295px;}
+.strong{
+    width:200px;
+    height: 24px;
+    position: absolute;
+    top: 27px;
+    left: 320px;
+    span{
+        float: left;
+        width: 58px;
+        height: 26px;
+        color: #6B6B6B;
+        font-size: 12px;
+    }
+}

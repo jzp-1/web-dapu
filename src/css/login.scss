@@ -1,0 +1,113 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+
+.login-main{
+    width: 1200px;
+    height: 480px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-right: 90px;
+    position: relative;
+    .loginBg{
+        width: 1200px;
+        height: 410px;
+        margin: 50px 0 60px 0;
+        background:url(../img/dapu_2014070101_login3.jpg)no-repeat;
+        background-size: cover;
+        .loginForm{
+            position: absolute;
+            width: 500px;
+            height: 370px;
+            padding: 10px;
+            margin: 10px;
+            right: 0;
+            top: 0;
+            background: rgba(255,255,255,0.9);
+            border-radius: 5px;
+            h3{
+                width: 500px;
+                height: 40px;
+                border-bottom: 1px solid #877b74;
+                margin-bottom: 50px;
+                color: #877b74;
+                text-align: center;
+                font-size: 24.5px;
+                line-height: 40px;
+            }
+            .contorl{
+                width: 500px;
+                height: 30px;
+                margin-bottom: 20px;
+                label{
+                    width: 160px;
+                    height: 20px;
+                    margin-bottom: 5px;
+                    padding-top: 5px;
+                    text-align: right;
+                    color: #6B6B6B;
+                    font-size: 14px;
+                    line-height: 20px;
+                    display: block;
+                    float: left;
+                }
+                input[type=text]{
+                    width: 147px;
+                    height: 20px;
+                    border: 1px solid rgb(218, 217, 217);
+                    padding: 4px 6px;
+                    color: #555;
+                    font-size: 14px;
+                    line-height: 20px;
+                    border-radius: 4px;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-color: rgba(255,255,255,0);
+                    margin-left: 30px;
+                    transition: border linear .2s,box-shadow linear .2s;
+                }
+                span{
+                    height: 24px;
+                    line-height: 24px;
+                    color: rgb(177, 0, 0);
+                    font-size: 12px;
+                    display: none;
+                }
+                input[type=button]{
+                    background-color: #49afcd;
+                    background-image: linear-gradient(to bottom,#5bc0de,#2f96b4);
+                    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);               
+                    padding: 4px 12px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    width: 54px;
+                    height: 30px;
+                    display: inline-block;
+                    color: #FFFFFF;
+                    margin-left: 190px;
+                    margin-right: 3px;
+                }
+                a{
+                  color: #4E8FC2;  
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+            p{
+                text-align: center;
+                a{
+                    color: #6B6B6B;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
