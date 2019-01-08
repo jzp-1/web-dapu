@@ -1,17 +1,17 @@
 .inner{width: 1200px;margin: auto;}
 .title{height: 70px;position: relative;}
 .logo{float: left;margin-top: 8px;}
-.logo h1,a{width: 390px;height: 58px;}
+.logo h1, .logo a{width: 390px;height: 58px;}
 .login{float: right;width: 100px;height: 26px;background: #b1544f;text-align: center;padding-top: 4px;margin-top: 20px;}
-.login a,span{color:#ffffff;}
-.login span{margin: 0 10px;}
+.login a{color:#ffffff;}
+.login span{margin: 0 10px;color:#ffffff;}
 .login a:hover{color: #7F5B42;}
 .search{position: absolute;left: 750px;top: 20px;}
 .search input{border: none;width: 200px;height: 12px;background: #eeeeee;font-weight: 600;color: #757575;padding: 9px 5px 9px 5px;border-radius: 5px;}
 .search a{background: url(../img/dapu_homeseach.png);width: 25px;height: 25px;position: absolute;right: 2px;top: 2px;}
 .cart{position: absolute;top: 20px;left: 970px;width: 40px;height: 40px;}
 .cart a{background: url(../img/dapu_201510150001-cart.png);width: 40px;height: 40px;position: absolute;}
-.cart span{background: #B1544F;border-radius: 50%;text-align: center;position: absolute;top: 0;right: 0;padding: 0px 5px;font-size: 12px;}
+.cart span{color:#ffffff;background: #B1544F;border-radius: 50%;text-align: center;position: absolute;top: 0;right: 0;padding: 0px 5px;font-size: 12px;}
 
 nav{height: 50px;line-height: 50px;text-align: center;}
 .nav-one ul{width: 100%;height: 100%;}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/css/detail.css" />
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div class="detail-main clearfix">
+				<div class="crumb">
+					<span><a href="">首页</a>&nbsp;></span>
+					<span><a href="">卧室用品</a>&nbsp;></span>
+					<span><a href="">床品件套</a>&nbsp;></span>
+					<span><a href="">四件套/三件套</a>&nbsp;></span>
+					<em>天然新疆棉针织三件套/四件套</em>
+				</div>
+				<div class="good-view">
+					<form id="main_form">
+						<div class="main-info clearfix">
+							<div class="good-leftbox clearfix">
+								<div class="exzoom" id="exzoom">
+								    <!--大图区域-->
+								    <div class="exzoom_img_box">
+								        <ul class='exzoom_img_ul'>
+								        	<script type="text/html" id="exzoom-template">
+								            	{{each list item i}}
+								            	<li><img src="{{item.img}}"/></li>
+								            	{{/each}}
+								       		</script>
+								        </ul>
+								    </div>
+								    <!--缩略图导航-->
+								    <div class="exzoom_nav"></div>
+								    <!--控制按钮-->
+								    <p class="exzoom_btn">
+								        <a href="javascript:void(0);" class="exzoom_prev_btn"> &lt; </a>
+								        <a href="javascript:void(0);" class="exzoom_next_btn"> &gt; </a>
+								    </p>
+								</div>
+								<div class="share">
+									<div class="links">
+										<a href="">
+											<div class="shoucang">收藏</div>
+										</a>
+										<a href="">
+											<div class="fenxiang">分享</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="good-rightbox clearfix" id="product-info">
+								<script type="text/html" id="product-template">
+								<h1 class="goods-name">{{list.name}}</h1>
+								<div class="product-id clearfix">
+									<span>商品编码：</span><span id="goodsBn">{{list.pro_code}}</span>
+								</div>
+								<div class="goods-price-box"><em><span>￥{{list.price}}</span></em></div>
+								<div class="vip-price clearfix">
+									<span class="vip-font">会员价</span><span class="mlv-font">￥{{list.vip_price}}</span>
+									<a href="">如何成为会员？</a>
+								</div>
+								<div class="promotion-show clearfix">
+									<span>促销</span>
+								</div>
+								<div class="score-wrap">
+									<ul>
+										<li>
+											<p class="score-num">{{list.sales}}</p>
+											<p class="score-name">销量</p>
+											<i class="score-tag-right"></i>
+										</li>
+										<li>
+											<p class="score-num">{{list.comment}}</p>
+											<p class="score-name">用户评论数</p>
+										</li>
+										<li>
+											<p class="score-num">{{list.score}}</p>
+											<p class="score-name">评论送积分</p>
+											<i class="score-tag-left"></i>
+										</li>
+									</ul>
+								</div>
+								<div class="tagline">
+									工艺上采用轻磨毛技术，使面料表面绒毛短密整齐，具有瞬间接触暖感效果<br />
+									无荧光，无甲醛，无致癌芳香胺，安全健康，宝宝使用也安全放心<br />
+									精选高品级棉花为原料，面料更加细腻柔暖，脱毛率达到一等品范围<br />
+								</div>
+								<div class="good-spec">
+									<div class="spec-item">
+										<label>
+											<span>
+												<em class="check">颜色：</em>
+											</span>
+										</label>
+										<div class="rightdiv1" >
+											<ul>
+												<li><a href="javascript:;"><span>
+															<nobr>深灰</nobr>
+														</span></a></li>
+												<li><a href="javascript:;"><span>
+															<nobr>驼色</nobr>
+														</span></a></li>
+												<li><a href="javascript:;"><span>
+															<nobr>烟粉</nobr>
+														</span></a></li>
+												<li><a href="javascript:;"><span>
+															<nobr>紫色</nobr>
+														</span></a></li>
+												<li><a href="javascript:;"><span>
+															<nobr>蓝灰</nobr>
+													</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="spec-item">
+										<label>
+											<span>
+												<em class="check">尺寸：</em>
+											</span>
+										</label>
+										<div class="rightdiv1">
+											<ul>
+												<li><a href="javascript:;"><span>
+															<nobr>1.5米床</nobr>
+														</span></a></li>
+												<li><a href="javascript:;"><span>
+															<nobr>1.8米床</nobr>
+														</span></a></li>
+											</ul>
+										</div>	
+									</div>
+								</div>
+								<div class="buyinfo">
+									<label>数量：</label>
+									<div class="numInput">
+										<ul>
+											<li class="deNum"><span>-</span></li>
+											<li class="goodNum"><input type="text" value="1"/></li>
+											<li class="inNum"><span>+</span></li>
+										</ul>
+									</div>
+									<span class="measure_span"><a href="">尺码助手</a></span>
+								</div>
+								<div class="hightline">
+									<div class="spacediv"></div>
+									<div class="btnBar clearfix">
+										<div class="btnwrap">
+											<input type="button" class="btn-buy" value="加入购物车"/>
+										</div>
+										<div class="qrcode_box">
+											<p class="qrcode_text">
+												“扫一扫”手机购买
+												<i class="qrcode_min"></i>
+												<i class="down-icon"></i>
+											</p>
+										</div>
+									</div>
+								</div>
+								</script>
+							</div>
+						</div>
+					</form>
+					<div class="bfd-box1 clearfix"></div>
+					<div class="product-info-box clearfix">
+						<div class="tab-left clearfix">
+							<div class="cat_list">
+								<h3>相关分类</h3>
+								<ul>
+									<li><a href="">床品件套</a></li>
+									<li><a href="">被子枕头</a></li>
+									<li><a href="">夏凉床品</a></li>
+									<li><a href="">智能家居</a></li>
+								</ul>
+							</div>
+							<div class="column_right" id="hotProduct">
+								<script type="text/html" id="hotproduct-template">
+								<h3>热销商品</h3>
+								{{each list item i}}
+								<div class="box_c">
+									<a href=""><img class="pic_c" src="{{item.img}}" alt="" /></a>
+									<h4>
+										<a href="">{{item.title}}</a>
+									</h4>
+									<p class="p_text">
+										<strong class="price">￥{{item.price}}</strong>
+									</p>
+								</div>
+								{{/each}}
+								</script>
+							</div>
+						</div>
+						<div class="tab-right clearfix">
+							<ul class="tab-nav" id="tab-nav">
+								<li><span>商品详情</span></li>
+								<li><span>售后服务</span></li>
+								<li><span>用户评论<em>(2)</em></span></li>
+							</ul>
+							<div class="goodsDetailContent" id="goodsDetailContent">
+								<div class="tab-on pro_comment ac" id="pro_comment" >
+									<div>
+										
+										<table>
+											<tbody>
+											<script type="text/html" id="procomment-template">
+											
+												{{each list item i}}
+												<tr class="firstRow">
+													<td class="firsttd">
+														<strong>{{item.info}}</strong>
+													</td>
+													<td>{{item.mainInfo}}</td>
+												</tr>
+												{{/each}}
+											
+											</script>
+											</tbody>
+										</table>
+										
+										<div id="procomment-pic">
+											<script type="text/html" id="procom-template">
+											{{each list item i}}
+											<p>
+												<img src="{{item.img}}" alt="" />
+											</p>
+											{{/each}}
+											</script>
+										</div>	
+										
+										
+										
+									</div>
+								</div>
+								<div id="aftersales" class="aftersales">
+									<img src="/img/bca163e083837ad5369e5b20ddde60a6.jpg" alt="" />
+								</div>
+								<div id="product_comment" class="product_comment">
+									<div class="table-con">
+										<div class="bd">
+											<div class="discuss">
+												<div class="dicuss-box">
+													<div class="comment-hd clearfix">
+														<div>匿名</div>
+													</div>
+													<div class="discuss-content">
+														<p>奥德赛佛isad积分骄傲搜地方见哦按点随机发斯蒂芬</p>
+													</div>
+													<div class="text-right">
+														<span class="time">2018-12-12 18:55:27</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer></footer>
+		<script src="/libs/require/require.js" data-main = "/js/detail.js"></script>
+	</body>
+</html>

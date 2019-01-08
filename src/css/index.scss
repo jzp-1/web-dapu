@@ -17,7 +17,7 @@
 .article .article_box{position: relative;}
 .article .article_box a{display: block;}
 .article .article_box a img{width: 398px;height: 218px;overflow: hidden;}
-.article_content{width: 380px;height: 128px;background: #eee;margin-left: 9px;position: absolute;bottom: -265px;}
+.article_content{width: 380px;height: 128px;background: #eee;margin-left: 9px;position: absolute;bottom: -105px;}
 .article_content span{color: rgb(108,108,108);font-size: 12px;margin-left: 5px;}
 .box_top{width: 380px;height: 50px;position: relative;}
 .box_top img{width: 40px;height: 40px;border-radius: 50%;position: absolute;left: 10px;top: 5px;}
@@ -80,5 +80,8 @@
 #memberBtn{top: 165px;line-height: 20px;}
 #cartBtn{top: 215px;}
 #appBtn{top: 265px;}
+#appBtn:hover+.appcode{display: block;}
 #kefuBtn{top: 315px;}
 #topBtn{top: 365px;line-height: 20px;}
+.appcode{width: 120px;height: 120px;position: fixed;right: 40px;top:265px;display: none;}
+.appcode img{width: 120px;height: 120px;}

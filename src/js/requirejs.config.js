@@ -8,11 +8,16 @@ require.config({
 		"carousel": "js/component/carousel",
 		"url": "js/component/url",
 		"template": "libs/template-web",
-		"item": "js/component/item"
+		"item": "js/component/item",
+		"exzoom": "libs/jquery/jquery-exzoom/jquery.exzoom"
+		
 	},
 	//不符合amd规范的模块 垫片
 	shim: {
 		"cookie": {
+			deps: ["jquery"]
+		},
+		"exzoom": {
 			deps: ["jquery"]
 		}
 	}
