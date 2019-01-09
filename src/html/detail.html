@@ -87,8 +87,8 @@
 									无荧光，无甲醛，无致癌芳香胺，安全健康，宝宝使用也安全放心<br />
 									精选高品级棉花为原料，面料更加细腻柔暖，脱毛率达到一等品范围<br />
 								</div>
-								<div class="good-spec">
-									<div class="spec-item">
+								<div class="good-spec" id="good-spec">
+									<div class="spec-item" id="pro-color">
 										<label>
 											<span>
 												<em class="check">颜色：</em>
@@ -96,25 +96,15 @@
 										</label>
 										<div class="rightdiv1" >
 											<ul>
+												{{each list.color item i}}
 												<li><a href="javascript:;"><span>
-															<nobr>深灰</nobr>
+															<nobr>{{item.pro_color}}</nobr>
 														</span></a></li>
-												<li><a href="javascript:;"><span>
-															<nobr>驼色</nobr>
-														</span></a></li>
-												<li><a href="javascript:;"><span>
-															<nobr>烟粉</nobr>
-														</span></a></li>
-												<li><a href="javascript:;"><span>
-															<nobr>紫色</nobr>
-														</span></a></li>
-												<li><a href="javascript:;"><span>
-															<nobr>蓝灰</nobr>
-													</span></a></li>
+												{{/each}}
 											</ul>
 										</div>
 									</div>
-									<div class="spec-item">
+									<div class="spec-item" id="pro-size">
 										<label>
 											<span>
 												<em class="check">尺寸：</em>
@@ -122,12 +112,11 @@
 										</label>
 										<div class="rightdiv1">
 											<ul>
+												{{each list.size item i}}
 												<li><a href="javascript:;"><span>
-															<nobr>1.5米床</nobr>
-														</span></a></li>
-												<li><a href="javascript:;"><span>
-															<nobr>1.8米床</nobr>
-														</span></a></li>
+															<nobr>{{item.pro_size}}</nobr>
+													</span></a></li>
+												{{/each}}	
 											</ul>
 										</div>	
 									</div>
@@ -136,9 +125,9 @@
 									<label>数量：</label>
 									<div class="numInput">
 										<ul>
-											<li class="deNum"><span>-</span></li>
-											<li class="goodNum"><input type="text" value="1"/></li>
-											<li class="inNum"><span>+</span></li>
+											<li class="deNum"><span id="deNum">-</span></li>
+											<li class="goodNum"><input type="text" value="1" id="goodNum"/></li>
+											<li class="inNum"><span id="inNum">+</span></li>
 										</ul>
 									</div>
 									<span class="measure_span"><a href="">尺码助手</a></span>

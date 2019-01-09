@@ -10,9 +10,8 @@
 .search input{border: none;width: 200px;height: 12px;background: #eeeeee;font-weight: 600;color: #757575;padding: 9px 5px 9px 5px;border-radius: 5px;}
 .search a{background: url(../img/dapu_homeseach.png);width: 25px;height: 25px;position: absolute;right: 2px;top: 2px;}
 .cart{position: absolute;top: 20px;left: 970px;width: 40px;height: 40px;}
-.cart a{background: url(../img/dapu_201510150001-cart.png);width: 40px;height: 40px;position: absolute;}
-.cart span{color:#ffffff;background: #B1544F;border-radius: 50%;text-align: center;position: absolute;top: 0;right: 0;padding: 0px 5px;font-size: 12px;}
-
+.cart .cartPic{background: url(../img/dapu_201510150001-cart.png);width: 40px;height: 40px;position: absolute;}
+.cart #totalNum{color:#ffffff;background: rgb(177, 84, 79);border-radius: 10px;text-align: center;position: absolute;top: -5px;left: 20px;padding: 1px 2px;font-size: 12px;line-height: 12px;min-width: 15px;min-height: 15px;}
 nav{height: 50px;line-height: 50px;text-align: center;}
 .nav-one ul{width: 100%;height: 100%;}
 .nav-one li{float: left;width: 100px;}

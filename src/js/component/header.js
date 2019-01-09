@@ -11,6 +11,15 @@ define(["jquery","cookie"], () => {
 				this.nav();
 				this.userLogin();
 				this.exit();
+				if($.cookie("good")){
+					let goodInfo=JSON.parse($.cookie("good"));
+					let totalNum=0;
+					for(let i=0;i<goodInfo.length;i++){
+						totalNum+=Number(goodInfo[i].num);
+					}
+					totalNum=totalNum.toString();
+					$("#totalNum").html(totalNum);
+				}
 			});
 			
 		}

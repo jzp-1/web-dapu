@@ -8,7 +8,6 @@ require(["./requirejs.config"],()=>{
 	      searchObj[arrSearch[0]] = arrSearch[1];
 		  $("#tab-nav li").on("click",function(){
 		  	let liIndex= $("#tab-nav li").index($(this))
-		  	console.log(liIndex)
 		  	$("#goodsDetailContent").children().eq(liIndex).addClass("ac").siblings().removeClass("ac")
 		  })
 	      $.ajax({
@@ -24,8 +23,7 @@ require(["./requirejs.config"],()=>{
 					$("#exzoom ul").html(html);
 					$("#exzoom").exzoom({
 				        autoPlay: false
-				    })
-					
+				   })
 				}
 	        }
 	      })
@@ -40,6 +38,68 @@ require(["./requirejs.config"],()=>{
 					//通过模板引擎渲染结构
 					let html = template("product-template", {list: res.res_body.data});
 					$("#product-info").html(html);
+					//选择颜色和尺寸
+					$("#pro-color span").on("click",function(){
+						$("#pro-color span").each(function(index){
+							$("#pro-color span").eq(index).removeClass("selected")
+						})
+						$(this).addClass("selected")
+					})
+					$("#pro-size span").on("click",function(){
+						$("#pro-size span").each(function(index){
+							$("#pro-size span").eq(index).removeClass("selected")
+						})
+						$(this).addClass("selected")
+					})
+					//数量的加减
+					
+					$("#deNum").on("click",function(){						
+						let goodNum=Number($("#goodNum").val());
+						if(--goodNum<1){
+							$("#goodNum").val(1)
+						}else{
+							$("#goodNum").val(goodNum);
+						}
+					})
+					$("#inNum").on("click",function(){						
+						let goodNum=Number($("#goodNum").val());
+						$("#goodNum").val(++goodNum);
+					})
+					//给加入购物车绑事件 存cookie
+					$(".btn-buy").on("click",function(){
+						let good={};
+						good.id=arrSearch[1];
+						good.img=list.img;
+						good.num=Number($("#goodNum").val());
+						good.color=$("#pro-color .selected nobr").html();
+						good.size=$("#pro-size .selected nobr").html();
+						good.price=list.price;
+						good.vipPrice=list.vip_price;
+						good.name=list.name;
+						if(good.size===undefined||good.size===undefined){
+							alert("请选择颜色和尺寸")
+						}else{
+							//判断有没有cookie没有就存 有就加
+							let goodArr=$.cookie("good")?JSON.parse($.cookie("good")):[];
+							console.log(goodArr)
+							let index;
+							let isExit=goodArr.some(function(item,i){
+								index=i;
+								return item.id===good.id&&item.size===good.size&&item.color===good.color;
+							})
+							//如果有同id改为增加num
+							if(isExit){
+								goodArr[index].num+=good.num;
+							}else{
+								goodArr.push(good);
+							}
+							$.cookie("good",JSON.stringify(goodArr));
+							console.log($.cookie("good"));
+							if(confirm("添加成功，立即去结算？")){
+								location.href="/html/cart.html"
+							}
+						}
+					})
 				}
 	        }
 	      })

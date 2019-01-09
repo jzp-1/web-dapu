@@ -11,15 +11,12 @@ require(["./requirejs.config"],()=>{
 			    let searchObj = {};
 			    searchObj[arrSearch[0]] = arrSearch[1];
 				let showId=arrSearch[1].substring(0,1);
-				console.log($(".sortList-ul").eq(showId-1))
 				$(".sortList-ul").eq(showId-1).addClass("ac");
 				$(".expand").on("click",function(){
-						console.log($(".expand").index(this))
 					location.search="id="+($(".expand").index(this)+1);
 				})
 				$(window).on("scroll",(e)=>{
 					e.preventDefault();
-					console.log(index*5*liHeight-30)
 					if($(window).scrollTop()+$(window).outerHeight()>index*5*liHeight+200){
 						index++;
 						$.ajax({
