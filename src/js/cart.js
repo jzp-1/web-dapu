@@ -107,7 +107,7 @@ require(["./requirejs.config"],()=>{
 			change(index){
 				let jsonArr=JSON.parse($.cookie("good"));
 				jsonArr[index].num=$(".good-number").eq(index).val();
-				$.cookie("good",JSON.stringify(jsonArr));
+				$.cookie("good",JSON.stringify(jsonArr),{path:"/"});
 				this.calc();
 			}
 			calc(){
@@ -145,7 +145,7 @@ require(["./requirejs.config"],()=>{
 					$.removeCookie("good");
 					this.init();
 				}else{
-					$.cookie("good",JSON.stringify(jsonArr));
+					$.cookie("good",JSON.stringify(jsonArr),{path:"/"});
 					this.init();
 				}
 			}

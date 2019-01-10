@@ -112,8 +112,7 @@ require(["./requirejs.config"],()=>{
 							}else{
 								goodArr.push(good);
 							}
-							$.cookie("good",JSON.stringify(goodArr));
-							console.log($.cookie("good"));
+							$.cookie("good",JSON.stringify(goodArr),{path:"/"});
 							if(confirm("添加成功，立即去结算？")){
 								location.href="/html/cart.html"
 							}
