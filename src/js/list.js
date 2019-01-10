@@ -10,6 +10,15 @@ require(["./requirejs.config"],()=>{
 			    let searchObj = {};
 			    searchObj[arrSearch[0]] = arrSearch[1];
 				let showId=arrSearch[1].substring(0,1);
+				//渲染浏览过的商品
+				this.see();
+				//给清除列表绑事件
+				$("#clearList").on("click",function(e){
+					e.preventDefault();
+					$.removeCookie("see");
+					_this.see();
+				})
+				//渲染列表页商品
 				$.ajax({
 					url: url.baseUrlRap+"/goodlist",
 					type: "get",
@@ -60,6 +69,15 @@ require(["./requirejs.config"],()=>{
 						})
 					}
 				})	
+			}
+			see(){
+				if($.cookie("see")!=undefined){
+					let seeJson=JSON.parse($.cookie("see"));
+					let seeHtml=template("seePro-template",{list:seeJson});
+					$("#seePro ul").html(seeHtml);
+				}else{
+					$("#seePro ul").html("");
+				};
 			}
 		}
 		return new List();

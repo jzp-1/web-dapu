@@ -315,20 +315,24 @@
 							<h2>浏览过的商品</h2>
 						</div>
 					<!--通过cookie来生成-->
-						<div class="mod-bd">
+						<div class="mod-bd" id="seePro">	
 							<ul>
+								<script type="text/html" id="seePro-template">
+								{{each list item i}}
 								<li>
 									<div class="goodpic">
-										<a href="">
-											<img src="" alt="" />
+										<a href="/html/detail.html?id={{item.id}}">
+											<img src="{{item.img}}" alt="" />
 										</a>
 									</div>
 									<div class="picinfo">
 										<span class="name">
-											
+											{{item.name}}
 										</span>
 									</div>
 								</li>
+								{{/each}}
+								</script>
 							</ul>
 						</div>
 					</div>

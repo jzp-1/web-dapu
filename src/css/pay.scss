@@ -1,0 +1,261 @@
+@import "./component/style.scss";
+
+.header{
+    margin-bottom: 10px;
+    width: 980px;
+    margin: 0 auto;
+    .logo{
+        float: left;
+        width: 260px;
+        height: 55px;
+        margin: 20px 10px 0 8px;
+        a{
+            color: #6B6B6B;
+            img{
+                width: 200px;
+                height: 50px;
+            }
+        }
+    }
+    .processNav{
+        float: left;
+        margin-top: 35px;
+        background: #fff;
+        color: #404040;
+        font-weight: 700;
+        list-style: none;
+        .step1{
+            width: 205px;
+            z-index: 4;
+        }
+        .step2{
+            width: 243px;
+            z-index: 3;
+        }
+        .step3{
+            width: 245px;
+            z-index: 2;
+        }
+        .on{
+            background: #615146;
+            color: #fff;
+        }
+        li{
+            float: left;
+            position: relative;
+            height: 26px;
+            background: #EEEEEE;
+            font-size: 14px;
+            line-height: 26px;
+            text-align: center;
+            padding: 0 1px;
+            font-weight: bold;
+            color: #000000;
+            .extra{
+                position: absolute;
+                right: -15px;
+                top: 0;
+                width: 18px;
+                height: 26px;
+            }
+        }
+    }
+}
+#order-creat{
+    .orders_page{
+        width: 1000px;
+        margin: 0 auto;
+        #addr_box{
+            border: 2px solid #615146;
+            width: 976px;
+            font-size: 13px;
+            padding: 10px;
+            margin: 20px 0;
+            .orderTitle{
+                width: 100%;
+                height: 32px;
+                line-height: 32px;
+                font-size: 14px;
+                font-weight: bolder;
+                color: #6b6b6b;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #efefef;
+            }
+            table{
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                th{
+                    height: 30px;
+                    text-align: right;
+                    width: 100px;
+                    color: #333333;
+                    padding: 3px;
+                    font-style: normal;
+                    font-weight: 500;
+                }
+                select{
+                    margin: 0;
+                    height: 26px;
+                }
+                td{
+                    span{
+                        color: red;
+                    }
+                }   
+            }
+            .btBox{
+                   height: 30px; 
+                   line-height: 30px;
+                   background-color: #3498db;
+                   width: 150px;
+                   text-align: center;
+                   margin: 10px;
+                   color: #FFFFFF;
+                }
+        }
+        input{
+            width: 270px;
+        }
+    }
+}
+
+.font-red{
+    color: red;
+    padding: 0 3px;
+    font-weight: bold;
+}
+input[type="text"]{
+    color: #34495e;
+    font-size: 14px;
+    padding: 2px;
+    height: 20px;
+    background: none;
+    outline: none;
+    border: 1px solid #bdc3c7;
+}
+input[type="text"]:hover{
+    border: 1px solid #E74C3C;
+}
+#payment_box{
+    width: 976px;
+    font-size: 13px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid ;
+    border-color: rgb(239,239,239);
+    .payment-title{
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        font-weight: bolder;
+        color: #6b6b6b;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #efefef;
+        span{
+            width: 150px;
+            display: block;
+            float: left;
+        }
+        a{
+            font-size: 12px;
+            color: #95a5a6;
+        }
+    }
+    .payment-content{
+        span{
+           display: block; 
+        }
+    }
+}
+#product_box{
+    width: 976px;
+    font-size: 13px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid;
+    border-color: rgb(239,239,239);
+    .product-title{
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        font-weight: bolder;
+        color: #6B6B6B;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #efefef;
+        a{
+            color: #6B6B6B;
+        }
+        span{
+            width: 150px;
+            display: block;
+            float: left;
+        }
+    }
+    table{
+        width: 100%;
+        text-align: left;
+        tr{
+            border: 5px solid #FFF;
+        }
+        th:nth-child(1){
+            width: 40%;
+        }
+        th:nth-child(2){
+            width: 10%;
+        }
+        th:nth-child(3){
+            width: 15%;
+        }
+        th:nth-child(4){
+            width: 10%;
+        }
+    }
+}
+.g-item{
+    img{
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        float: left;
+    }
+    a{
+        color: #6B6B6B;
+    }
+}
+
+
+
+.totalPrice{
+    width: 976px;
+    background: #fff;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    .moneyPay{
+        div{
+            text-align: right;
+            font-size: 16px;
+            color: #212529;
+            p{
+               margin-bottom: 16px; 
+            }
+            p:nth-child(2){
+                color: red;
+            }
+        }
+    }
+    .checkOrder{
+        color: #FFFFFF;
+        background-color: #2980b9;
+        border-color: #2980b9;
+        display: inline-block;
+        border: 1px solid ;
+        font-size: 20px;
+        padding: 6px 12px;
+        line-height: 1.5;  
+        border-radius: 5px;
+    }
+}

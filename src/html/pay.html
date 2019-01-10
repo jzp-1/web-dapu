@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/css/pay.css" />
+	</head>
+	<body>
+		<div class="header clearfix">
+			<div class="logo">
+				<a href="/"><img src="/img/logo2015.png" alt="" /></a>
+			</div>
+			<ol class="processNav">
+				<li class="step1">
+					1、我的购物车
+					<b class="extra"></b>
+				</li>
+				<li class="step2 on">
+					2、填写核对订单信息
+					<b class="extra"></b>
+				</li>
+				<li class="step3">
+					3、成功提交订单
+				</li>
+			</ol>
+		</div>
+		<form id="order-creat">
+			<div class="orders_page">
+				<div id="addr_box">
+					<div class="orderTitle">
+						<span>收货人信息</span>
+					</div>
+					<div class="orderInfo">
+						<div class="newOrder">
+							<div class="checkout">
+								<table>
+									<tbody>
+										<tr>
+											<th>
+												<em class="font-red">*</em>
+												收货人姓名
+											</th>
+											<td>
+												<input type="text" />
+												<span id="order_tishi1">请输入收货人姓名</span>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												<em class="font-red">*</em>
+												收货人地址
+											</th>
+											<td>
+												<input type="text" />
+												<span id="order_tishi2">请输入收货人地址</span>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												
+												邮编
+											</th>
+											<td>
+												<input type="text" />
+											</td>
+										</tr>
+										<tr>
+											<th>
+												<em class="font-red">*</em>
+												手机
+											</th>
+											<td>
+												<input type="text" />
+												<span id="order_tishi1">请输入手机号</span>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												送货时间
+											</th>
+											<td>
+												<select name="delivery[day]" id="delivery">
+													<option value="工作日、双休日与假日均可送货" selected="selected">工作日、双休日与假日均可送货</option>
+													<option value="只工作日送货(双休日、假日不用送)">只工作日送货(双休日、假日不用送)</option>
+													<option value="只双休日、假日送货(工作日不用送)">只双休日、假日送货(工作日不用送)</option>
+												</select>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="btBox">
+											确认收货人信息
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="payment_box">
+					<div class="payment-title">
+						<span>配送及支付方式</span>
+						<a href="">修改</a>
+					</div>
+					<div class="payment-content">
+						<span>配送方式：快递-网上支付</span>
+						<span>付款方式：网银-中国工商银行</span>
+					</div>
+				</div>
+				<div id="product_box">
+					<div class="product-title">
+						<span>商品清单</span>
+						<a href="/html/cart.html">&lt;&lt;返回修改购物车</a>
+					</div>
+					<div class="product-content" id="payBox">
+						<table>
+							<thead>
+								<tr>
+									<th>
+										商品信息
+									</th>
+									<th>
+										商品单价
+									</th>
+									<th>
+										商品数量
+									</th>
+									<th>
+										小计
+									</th>
+								</tr>
+							</thead>	
+							<tbody>
+								<script type="text/html" id="payBox-template">
+								{{each list item i}}
+								<tr class="g-item">
+									<td class="g-information">
+										<div class="container">
+											<div class="row">
+												<div class="col-3">
+													<a href="/html/detail.html?id={{item.id}}">
+														<img src="{{item.img}}" alt="" />
+													</a>
+												</div>
+												<div class="col-9">
+													<a href="/html/detail.html?id={{item.id}}">{{item.name}}</a>
+													<p class="spec-info">
+														尺寸：{{item.size}}   颜色：{{item.color}}
+													</p>
+												</div>
+											</div>	
+										</div>
+									</td>
+									<td class="g-num">
+										<span>￥{{item.price}}</span>
+									</td>
+									<td class="g-edit">
+										<span>{{item.num}}</span>
+									</td>
+									<td class="g-total">￥<span class="good-total-price">4324</span></td>
+								</tr>
+								{{/each}}
+								</script>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="totalPrice">
+			<div class="moneyPay">
+				<div>
+					<p>原始金额￥<span id="totalMoney">0</span></p>
+					<p>优惠金额￥<span id="dePrice">0</span></p>
+					<p><strong>商品总金额(不含运费):￥</strong><span id="productMoney">0</span></p>
+				</div>
+				<div>
+					<a href="/" class="checkOrder">提交订单</a>
+				</div>
+			</div>
+		</div>
+		<script src="/libs/require/require.js" data-main = "/js/pay.js"></script>
+	</body>
+</html>

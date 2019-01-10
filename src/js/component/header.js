@@ -11,6 +11,7 @@ define(["jquery","cookie"], () => {
 				this.nav();
 				this.userLogin();
 				this.exit();
+				//头部购物车图片显示数量
 				if($.cookie("good")){
 					let goodInfo=JSON.parse($.cookie("good"));
 					let totalNum=0;

@@ -52,6 +52,7 @@ require(["./requirejs.config"],()=>{
 					}
 					_this.calc();
 				})
+				//给全选反选绑事件
 				$("thead input[type=checkbox]").eq(0).on("click",function(){
 					if($("thead input[type=checkbox]").eq(0).prop("checked")){
 						for(let i=0;i<$("tbody input[type=checkbox]").length;i++){
@@ -63,6 +64,16 @@ require(["./requirejs.config"],()=>{
 							$("tbody input[type=checkbox]").eq(j).prop("checked",false);
 							_this.calc();
 						}
+					}
+				})
+				//给结算按钮绑事件
+				$(".goPay").on("click",function(e){
+					e.preventDefault();
+					if($.cookie("user")!=undefined){
+						location.href="/html/pay.html";
+					}else{
+						alert("请先登录");
+						location.href="/html/login.html";
 					}
 				})
 			}

@@ -19,10 +19,10 @@ require(["./requirejs.config"],()=>{
 						//渲染成功后给隐藏盒子设置效果
 						$("#newProList a").on("mouseenter",function(){
 							let boxWidth=$(this).css("width");
-							$(this).children(".infoBox").css({"width":boxWidth}).animate({opacity:1,height:48},500)
+							$(this).children(".infoBox").css({"width":boxWidth}).stop().animate({opacity:1,height:48},200)
 						})
 						$("#newProList a").on("mouseleave",function(){
-							$(this).children(".infoBox").animate({opacity:0,height:0},500)
+							$(this).children(".infoBox").stop().animate({opacity:0,height:0},200)
 						})
 					}
 		        }
@@ -38,10 +38,10 @@ require(["./requirejs.config"],()=>{
 						$("#hot").html(html);
 						$("#hot a").on("mouseenter",function(){
 							let boxWidth=$(this).css("width");
-							$(this).children(".infoBox").css({"width":boxWidth}).animate({opacity:1,height:48},500)
+							$(this).children(".infoBox").css({"width":boxWidth}).animate({opacity:1,height:48},200)
 						})
 						$("#hot a").on("mouseleave",function(){
-							$(this).children(".infoBox").animate({opacity:0,height:0},500)
+							$(this).children(".infoBox").animate({opacity:0,height:0},200)
 						})
 		        	}
 	         	}
@@ -57,10 +57,10 @@ require(["./requirejs.config"],()=>{
 						$("#hotTwo").html(html);
 						$("#hotTwo a").on("mouseenter",function(){
 							let boxWidth=$(this).css("width");
-							$(this).children(".infoBox").css({"width":boxWidth}).animate({opacity:1,height:48},500)
+							$(this).children(".infoBox").css({"width":boxWidth}).animate({opacity:1,height:48},200)
 						})
 						$("#hotTwo a").on("mouseleave",function(){
-							$(this).children(".infoBox").animate({opacity:0,height:0},500)
+							$(this).children(".infoBox").animate({opacity:0,height:0},200)
 						})
 		        	}
 	         	}
