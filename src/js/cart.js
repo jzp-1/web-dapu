@@ -134,7 +134,7 @@ require(["./requirejs.config"],()=>{
 				$("#productMoney").html(productMoney);
 			}
 			clearAll(){
-				$.removeCookie("good");
+				$.removeCookie("good",{path:"/"});
 				this.init();
 			}
 			del(index){
@@ -142,7 +142,7 @@ require(["./requirejs.config"],()=>{
 				let jsonArr=JSON.parse($.cookie("good"));
 				jsonArr.splice(index,1);
 				if(JSON.stringify(jsonArr)==="[]"){
-					$.removeCookie("good");
+					$.removeCookie("good",{path:"/"});
 					this.init();
 				}else{
 					$.cookie("good",JSON.stringify(jsonArr),{path:"/"});
