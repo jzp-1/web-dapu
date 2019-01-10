@@ -37,30 +37,28 @@
 .box_bottom span{display: block;width: 4px;height: 16px;background: #76C5AF;position: absolute;top: 3px;}
 .article-text{float: left;margin-left: 10px;color: rgb(34,34,34);font-size: 14px;padding-left: 15px;}
 
+.product{position: relative;}
 .newPro{margin: 0 auto;width: 1200px;}
 .newPro img{width: 1200px;height: 60px;}
-.newPro-list{display: flex;width: 1200px;height: 290px;margin: 0 auto;justify-content: space-between;}
+.newPro-list{display: flex;width: 1202px;height: 290px;margin: 0 auto;justify-content: space-between;}
+.infoBox{width: 398px;opacity: 0;height: 0;left: 0;position: absolute;bottom: 0;overflow: hidden;z-index: 3;font-size: 13px;background: #FFFFFF;transition: all .2s linear;text-align: center;color: #000000;padding-top: 10px;}
+.newPro-list a{position: relative;}
 
 .hotPro{margin: 0 auto;width: 1200px;margin-top: 10px;}
 .hotPro-list{width: 1200px;height: 480px;margin: 0 auto;position: relative;}
-.hotPro-list img{border: 1px solid #FFFFFF;}
+.hotPro-list a{position: relative;}
+.hotPro-list img{border: 1px solid #FFFFFF; max-height: 100%;max-width: 100%;}
 .model4,.model7{width: 240px;height: 480px;position: absolute;}
 .model7{left: 960px;top: 0;}
-.model4 img{width: 238px;height: 478px;}
-.model7 img{width: 238px;height: 478px;}
 .model5,.model8{width: 480px;height: 240px;position: absolute;}
 .model5{left: 240px;}
-.model5 img{width: 478px;height: 238px;}
 .model8{left: 240px;top: 240px;}
-.model8 img{width: 478px;height: 238px;}
 .model6,.model9{width: 240px;height: 240px;position: absolute;}
 .model6{left: 720px;}
-.model6 img{width: 238px;height: 238px;}
 .model9{left: 720px;top: 240px;}
-.model9 img{width: 238px;height: 238px;}
 .hotPro-list-two{width: 1200px;height: 480px;margin: 0 auto;display: flex;justify-content: space-around;flex-wrap: wrap;align-content: space-around;}
-.hotPro-list-two div{width: 240px;height: 240px;}
-.hotPro-list-two img{width: 238px;height: 238px;border: 1px solid #FFFFFF;}
+.hotPro-list-two .product{width: 240px;height: 240px;}
+.hotPro-list-two img{border: 1px solid #FFFFFF;}
 
 .code{width: 1200px;height: 190px;margin: 0 auto;  margin-top: 10px;display: flex;justify-content: space-around;background: #eeeeee;}
 .code div{width: 300px;height: 150px;margin-top: 20px;}

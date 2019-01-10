@@ -105,15 +105,19 @@
 					<img src="img/e8b2798aa8ee69879c0909ac4390e0cd.jpg" alt="新品" />
 				</a>
 			</div>
-			<div class="newPro-list">
-				<div class="product model1">
-					<a href=""><img src="img/fea83407bb8076a2aedfc0cb8a58d995.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model2">
-					<a href=""><img src="img/61e634b805524b683cf0c3994f37c835.jpg" alt="model2" /></a>
-				</div>
-				<div class="product model3">
-					<a href=""><img src="img/d70904ea54c7d8b93f95ab94a55c2d8f.jpg" alt="model3" /></a>
+			<div class="newPro-list proList">
+				<div class="product model1" id="newProList">
+					<script type="text/html" id="newProList-template">
+					{{each list item i}}
+					<a href="/html/detail.html?id={{item.id}}">
+						<img src="{{item.img}}" alt="model{{item.id}}" />
+						<div class="infoBox">
+							<p>{{item.title}}</p>
+							<p>RMB：{{item.price}}</p>
+						</div>
+					</a>
+					{{/each}}
+					</script>
 				</div>
 			</div>
 			
@@ -122,57 +126,79 @@
 					<img src="img/20170811003_news.jpg" alt="热品" />
 				</a>
 			</div>
-			<div class="hotPro-list">
+			<div class="hotPro-list proList" id="hot">
+				<script type="text/html" id="hot-template">
 				<div class="product model4">
-					<a href=""><img src="img/facff0caebee7a5feb3ec1f401d4f762.jpg" alt="model1" /></a>
+					<a href="/html/detail.html?id={{list.pro1.id}}">
+						<img src="{{list.pro1.img}}" alt="model1" />
+						<div class="infoBox">
+							<p>{{list.pro1.title}}</p>
+							<p>RMB：{{list.pro1.price}}</p>
+						</div>
+					</a>
 				</div>
 				<div class="product model5">
-					<a href=""><img src="img/7bb163a3c2240e99bdded2f718029c72.jpg" alt="model1" /></a>
+					<a href="/html/detail.html?id={{list.pro2.id}}">
+						<img src="{{list.pro2.img}}" alt="model1" />
+						<div class="infoBox">
+							<p>{{list.pro2.title}}</p>
+							<p>RMB：{{list.pro2.price}}</p>
+						</div>
+					</a>
 				</div>
 				<div class="product model6">
-					<a href=""><img src="img/9fd9c307babfd1c2de5f24bc5515b466.jpg" alt="model1" /></a>
+					<a href="/html/detail.html?id={{list.pro3.id}}">
+						<img src="{{list.pro3.img}}" alt="model1" />
+						<div class="infoBox">
+							<p>{{list.pro3.title}}</p>
+							<p>RMB：{{list.pro3.price}}</p>
+						</div>
+					</a>
 				</div>
 				<div class="product model7">
-					<a href=""><img src="img/55ae4e3dd2811ac0e2edaca382f4db4b.jpg" alt="model1" /></a>
+					<a href="/html/detail.html?id={{list.pro4.id}}">
+						<img src="{{list.pro4.img}}" alt="model1" />
+						<div class="infoBox">
+							<p>{{list.pro4.title}}</p>
+							<p>RMB：{{list.pro4.price}}</p>
+						</div>
+					</a>
 				</div>
 				<div class="product model8">
-					<a href=""><img src="img/ee5eeffbd79927be185943a6cd8545d8.jpg" alt="model1" /></a>
+					<a href="/html/detail.html?id={{list.pro5.id}}">
+						<img src="{{list.pro5.img}}" alt="model1" />
+						<div class="infoBox">
+							<p>{{list.pro5.title}}</p>
+							<p>RMB：{{list.pro5.price}}</p>
+						</div>
+					</a>
 				</div>
 				<div class="product model9">
-					<a href=""><img src="img/2bc4c0abc862c95bbda9a97887ffbf7d.jpg" alt="model1" /></a>
+					<a href="/html/detail.html?id={{list.pro6.id}}">
+						<img src="{{list.pro6.img}}" alt="model1" />
+						<div class="infoBox">
+							<p>{{list.pro6.title}}</p>
+							<p>RMB：{{list.pro6.price}}</p>
+						</div>
+					</a>
 				</div>
+				</script>
 			</div>
-			<div class="hotPro-list-two">
-				<div class="product model10">
-					<a href=""><img src="img/0638dea897a60ddd938a579631e2a3f9.jpg" alt="model1" /></a>
+			
+			<div class="hotPro-list-two proList" id="hotTwo">
+				<script type="text/html" id="hotTwo-template">
+				{{each list item i}}
+				<div class="product">
+					<a href="/html/detail.html?id={{item.id}}">
+						<img src="{{item.img}}" alt="model1" />
+						<div class="infoBox">
+							<p>{{item.title}}</p>
+							<p>RMB：{{item.price}}</p>
+						</div>
+					</a>
 				</div>
-				<div class="product model11">
-					<a href=""><img src="img/c7c2224df88e1da6a4ea561cb9ecd215.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model12">
-					<a href=""><img src="img/48550bb806421d2f9a3c18dbe3a55d02.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model13">
-					<a href=""><img src="img/b63082c3a61c9ab0574e7f14bfcf5e06.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model14">
-					<a href=""><img src="img/a7bfd25ce9a4fc6e837a1f605895c997.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model15">
-					<a href=""><img src="img/e1441b3c24c43b2d81559f5149164227.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model16">
-					<a href=""><img src="img/3151079facb25fd43595bb314eaa21dd.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model17">
-					<a href=""><img src="img/00b9a543b3195a7a1c77b0470dca3947.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model18">
-					<a href=""><img src="img/f63e2d13de91e458e8143f4534fee009.jpg" alt="model1" /></a>
-				</div>
-				<div class="product model19">
-					<a href=""><img src="img/951644e0d982d56cc09d227535a1b472.jpg" alt="model1" /></a>
-				</div>
+				{{/each}}
+				</script>
 			</div>
 			<div class="code">
 			    <div>

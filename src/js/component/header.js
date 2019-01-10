@@ -56,7 +56,6 @@ define(["jquery","cookie"], () => {
 				$("#user").html("登录");
 				$("#user").attr({"href":"/html/login.html"});
 				$("#exit").html("注册");
-				$("#exit").attr({"href": "/html/register.html"});
 				$(".login").css({"width":100});
 			})
 		}

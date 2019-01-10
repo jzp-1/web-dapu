@@ -6,10 +6,12 @@ require(["./requirejs.config"],()=>{
 	      let arrSearch = location.search.slice(1).split("=");
 	      let searchObj = {};
 	      searchObj[arrSearch[0]] = arrSearch[1];
+	      //介绍卡切换
 		  $("#tab-nav li").on("click",function(){
 		  	let liIndex= $("#tab-nav li").index($(this))
 		  	$("#goodsDetailContent").children().eq(liIndex).addClass("ac").siblings().removeClass("ac")
 		  })
+		  //渲染放大镜
 	      $.ajax({
 	        url:url.baseUrlRap+"/pro-pic",
 	        type:"GET",
@@ -27,6 +29,7 @@ require(["./requirejs.config"],()=>{
 				}
 	        }
 	      })
+	      //渲染信息页
 			$.ajax({
 	        url:url.baseUrlRap+"/detail",
 	        type:"GET",
@@ -38,6 +41,23 @@ require(["./requirejs.config"],()=>{
 					//通过模板引擎渲染结构
 					let html = template("product-template", {list: res.res_body.data});
 					$("#product-info").html(html);
+					//渲染成功后把当前商品信息存入cookie方便渲染浏览过的商品
+					let see={};
+					see.img=list.img;
+					see.id=arrSearch[1];
+					see.name=list.name;
+					let seeArr=$.cookie("see")?JSON.parse($.cookie("see")):[];
+					let index;
+					let isExit=seeArr.some(function(item,i){
+						index=i;
+						return item.id===see.id;
+					})
+					if(!isExit){
+						seeArr.push(see);
+					}
+					$.cookie("see",JSON.stringify(seeArr));
+					//评论数根据数据改变 完整渲染需要再给个接口 这里就简单实现数量看起来相等
+					$("#talkNum").html("("+$(".talkNum").html()+")");
 					//选择颜色和尺寸
 					$("#pro-color span").on("click",function(){
 						$("#pro-color span").each(function(index){
@@ -81,7 +101,6 @@ require(["./requirejs.config"],()=>{
 						}else{
 							//判断有没有cookie没有就存 有就加
 							let goodArr=$.cookie("good")?JSON.parse($.cookie("good")):[];
-							console.log(goodArr)
 							let index;
 							let isExit=goodArr.some(function(item,i){
 								index=i;
