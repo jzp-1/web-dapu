@@ -35,6 +35,7 @@ require(["./requirejs.config"],()=>{
 				
 				//给选择框绑点击事件 每次点击循环判断是否选中所有 以及是否全不选
 				$("tbody input[type=checkbox]").on("click",function(){
+					console.log(JSON.parse($.cookie("good")))
 					let count=0;
 					let m=$("tbody input[type=checkbox]").length;
 					for(let i=0;i<$("tbody input[type=checkbox]").length;i++){
@@ -50,6 +51,7 @@ require(["./requirejs.config"],()=>{
 					if(m===0){
 						$("thead input[type=checkbox]").eq(0).prop("checked",false);
 					}
+					
 					_this.calc();
 				})
 				//给全选反选绑事件
@@ -122,10 +124,10 @@ require(["./requirejs.config"],()=>{
 					}
 				}
 				for(let i=0;i<checkedBox.length;i++){
-					let money=Number(arr[i].num)*Number(arr[i].price);
+					let money=Number(arr[checkedBox[i]].num)*Number(arr[checkedBox[i]].price);
 					totalMoney+=money;
 					money=money.toFixed(2);
-					$(".good-total-price").eq(i).html(money);
+					$(".good-total-price").eq([checkedBox[i]]).html(money);
 				}
 				productMoney=totalMoney-dePrice;
 				totalMoney=totalMoney.toFixed(2);

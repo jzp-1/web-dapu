@@ -53,7 +53,7 @@ define(["jquery","cookie"], () => {
 		}
 		exit(){
 			$("#exit").on("click",function(){
-				$.removeCookie("user");
+				$.removeCookie("user",{path:"/"});
 				$("#user").html("登录");
 				$("#user").attr({"href":"/html/login.html"});
 				$("#exit").html("注册");
