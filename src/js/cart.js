@@ -122,12 +122,13 @@ require(["./requirejs.config"],()=>{
 					if($("tbody input[type=checkbox]").eq(j).prop("checked")){
 						checkedBox.push(j);
 					}
+					let money=Number(arr[j].num)*Number(arr[j].price);
+					money=money.toFixed(2);
+					$(".good-total-price").eq([j]).html(money);
 				}
 				for(let i=0;i<checkedBox.length;i++){
 					let money=Number(arr[checkedBox[i]].num)*Number(arr[checkedBox[i]].price);
 					totalMoney+=money;
-					money=money.toFixed(2);
-					$(".good-total-price").eq([checkedBox[i]]).html(money);
 				}
 				productMoney=totalMoney-dePrice;
 				totalMoney=totalMoney.toFixed(2);

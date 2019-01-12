@@ -44,7 +44,7 @@ define(["jquery","cookie"], () => {
 		}
 		userLogin(){
 			if($.cookie("user")!=undefined){
-				$("#user").html($.cookie("user"));
+				$("#user").html($.cookie("user"),{path:"/"});
 				$("#user").attr({"href": "javascript:;"});
 				$("#exit").html("退出")
 				$("#exit").attr({"href": "javascript:;"})
